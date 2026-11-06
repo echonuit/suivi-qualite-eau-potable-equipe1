@@ -18,15 +18,15 @@ final class Connexion
     {
         $dsn = sprintf(
             'pgsql:host=%s;port=%s;dbname=%s',
-            self::variable('DB_HOST', 'localhost'),
+            self::variable('DB_HOST', 'postgresql-opotable.alwaysdata.net'),
             self::variable('DB_PORT', '5432'),
-            self::variable('DB_NAME', 'eau'),
+            self::variable('DB_NAME', 'opotable_bd'),
         );
 
         return new PDO(
             $dsn,
-            self::variable('DB_USER', 'eau'),
-            self::variable('DB_PASSWORD', 'eau'),
+            self::variable('DB_USER', 'opotable'),
+            self::variable('DB_PASSWORD', 'OpotableKYS67!'),
             [
                 // Une erreur SQL lève une exception au lieu de passer inaperçue.
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
